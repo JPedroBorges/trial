@@ -19,27 +19,21 @@
 </head>
 <body>
 	<div class="container">
-		<div class="jumbotron">
-			<h1>21º</h1>
-			<p class="lead">Funchal</p>
+		<div class="jumbotron infocenas" hidden>
+			<h1 class="temperature">º</h1>
+			<p class="lead county-name">Funchal</p>
 			<p><a class="btn btn-lg btn-success" href="#" role="button">what about tomorrow?</a></p>
 		</div>
 	</div>
 	<div class="container">
 		<div class="jumbotron">
-			<div class="btn-group">
-				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					Funchal <span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu">
-					<li><a href="#">Lisboa</a></li>
-					<li><a href="#">Porto</a></li>
-				</ul>
-			</div>
+			<select class="counties-sel">
+			</select>
 		</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 	<script src="js/ie10-viewport-bug-workaround.js"></script>
+	<script src="js/client.js"></script>
 </body>
 </html>
