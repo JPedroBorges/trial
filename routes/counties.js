@@ -19,7 +19,7 @@ router.get('/', function(request, response){
 		var county = body.map(function(item) {
 		    return item.nome_concelho;
 		});
-		response.json(county);
+		response.status(200).json(county);
 	});
 });
 
