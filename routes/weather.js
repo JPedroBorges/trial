@@ -20,7 +20,21 @@ router.get('/:county', function(request, response){
 	var url = urlbase + "forecast?q=" + request.params.county + urlend;
 
 	getJSON(url, function (body){
-		response.status(200).json(body);
+		var count = 0;
+		var sum = 0;
+		var lol = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
+
+		for(var i=0; i<body.list.length; i++){
+			if(lol.slice(0,10) != body.list[i].dt_txt.slice(0,10)){
+				if(count <8){
+					sum += body.list[i].main.temp;
+					count++;
+				}
+			}
+		}
+		var avg = sum/8;
+
+		response.status(200).json(avg);
 	});
 });
 router.get('/:county/daily', function(request, response){
