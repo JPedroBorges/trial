@@ -22,7 +22,38 @@
 		<div class="jumbotron infocenas" hidden>
 			<h1 class="temperature">º</h1>
 			<p class="lead county-name">Funchal</p>
-			<p><a class="btn btn-lg btn-success" href="#" role="button">what about tomorrow?</a></p>
+			<button type="button" class="btn btn-lg btn-success" data-toggle="modal" data-target="#myModal">what about tomorrow?</button>
+
+			<div id="myModal" class="modal fade" role="dialog">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">and for tomorrow we have:</h4>
+						</div>
+						<div class="modal-body">
+							<h1 class="temperatureT">º</h1>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+
+
+
+
+		</div>
+		<div class="jumbotron" hidden>
+			<hr>
+			<br>
+
 		</div>
 	</div>
 	<div class="container">
