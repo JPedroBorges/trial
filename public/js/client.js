@@ -1,5 +1,6 @@
 $(function(){
 	$.get('/counties', appendToList);
+
 	function appendToList(counties){
 		var list = ['<option value="vazio"></option>'];
 		$('#infocenas').hide();
