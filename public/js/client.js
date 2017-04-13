@@ -2,7 +2,7 @@ $(function(){
 	$.get('/counties', appendToList);
 	function appendToList(counties){
 		var list = ['<option value="vazio"></option>'];
-		$('.infocenas').hide();
+		$('#infocenas').hide();
 		for(var i in counties){
 			list.push($('<option>',{value: counties[i], text: counties[i]}));
 		}
@@ -15,11 +15,11 @@ $(function(){
 	    }).change();
 	});
 	function setTemperature(temperature){
-		$('.counties-sel').val() === 'vazio' ? $('.infocenas').hide() : $('.infocenas').show();
-		$('.temperature').html(temperature + 'º');
+		$('.counties-sel').val() === 'vazio' ? $('#infocenas').hide() : $('#infocenas').show();
+		$('.temperature').html(Math.round(temperature) + 'º');
 	}
 	function setTemperatureTomorrow(temperature2){
-		$('.temperatureT').html(temperature2 + 'º');
+		$('.temperatureT').html(Math.round(temperature2) + 'º');
 	}
 	$(".btn-success").click(function(){
 		 $.get('/weather/' + $('.counties-sel').val(), setTemperatureTomorrow);
